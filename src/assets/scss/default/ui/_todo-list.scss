@@ -1,0 +1,14 @@
+.todo-list {
+    @include grid-row(12, 10);
+    margin-top: 1rem;
+
+    .todo-list__header {
+        @include clearfix();
+        @include grid-col(12);
+        @include grid-column-position(center);
+
+        input {
+            
+        }
+    }
+}
