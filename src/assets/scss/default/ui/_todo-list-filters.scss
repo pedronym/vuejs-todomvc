@@ -1,0 +1,24 @@
+.todo-list-filters {
+
+  @include grid-col(12);
+  @include grid-column-position(center);
+  @include clearfix();
+
+  @media #{$medium-up} {
+    @include grid-col(4);
+  }
+
+  margin-top: 1rem;
+
+  .todo-filters__actions {
+
+    @media #{$medium-up} {
+      @include grid-col(4);
+    }
+    margin: 0;
+  }
+
+  .todo-actions__button {
+    @include button();
+  }
+}

@@ -1,5 +1,9 @@
 .todo-wrapper {
-    @include grid-row(12, 10);
+    @include grid-col(12);
+
+    @media #{$medium-up} {
+      @include grid-col(8);
+    }
 
     .todo-list-item {
         @include clearfix();
@@ -7,7 +11,8 @@
         @include grid-column-position(center);
         background-color: $light;
         margin-top: 2px;
-        padding: 0.5rem 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 
         &.done {
             opacity: 0.6;
@@ -19,12 +24,11 @@
     }
 
     .todo-list-item__text {
-        @include grid-col(9);
-    
+        @include grid-col(8, 10);
+
         .todo-list-item__title {
             font-size: 1rem;
             margin-bottom: 0;
-            text-transform: uppercase;
         }
 
         .todo-list-item__date {
@@ -33,7 +37,7 @@
     }
 
     .todo-list-item__actions {
-        @include grid-col(3);
+        @include grid-col(4, 10);
         text-align: right;
 
         a {
